@@ -1,9 +1,18 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="Base.Theme.RadioTatina" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="bottomNavigationStyle">@style/NoRippleBottomNavigation</item>
     </style>
+    <style name="NoRippleBottomNavigation" parent="Widget.MaterialComponents.BottomNavigationView">
+        <!-- Убираем ripple цвет -->
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <!-- Убираем фон выбранного элемента -->
+        <item name="itemBackground">@android:color/transparent</item>
+    </style>
+
 
     <style name="Theme.RadioTatina" parent="Base.Theme.RadioTatina" />
 </resources>
